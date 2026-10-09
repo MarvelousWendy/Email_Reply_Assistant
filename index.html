@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SpeedX 客服服务部 · 邮件回复决策助手（中英文双语）/ Email Reply Decision Assistant (ZH/EN)" />
+  <title>邮件回复决策助手 · SpeedX 客服服务部</title>
+
+  <!-- Favicon：使用 📧 emoji 作为 SVG 图标 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📧</text></svg>" />
+
+  <!-- 样式表 -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ========== 页头 ========== -->
+    <header>
+      <div class="header-row">
+        <h1 id="appTitle">📧 邮件回复决策助手</h1>
+        <button class="lang-switch" id="langSwitch" type="button" title="Switch to English">
+          🌐 <span class="lang-label" id="langLabel">中文</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========== 场景优先级 ========== -->
+    <div class="prio">
+      <span id="prioText">场景优先级：<span class="priority-safe">安全类</span> &gt; 服务类 &gt; 时效类 &gt; 需求类 &gt; 其他类</span>
+    </div>
+
+    <!-- ========== 面包屑（动态更新） ========== -->
+    <div class="breadcrumb" id="breadcrumb"></div>
+
+    <!-- ========== 主舞台（问题 / 方案 / 结果卡片动态渲染到此） ========== -->
+    <div id="stage">
+      <div class="card">
+        <p class="empty-msg">⏳ 加载中 / Loading…</p>
+      </div>
+    </div>
+
+    <!-- ========== 页脚 ========== -->
+    <footer>🥳 Created by <a href="https://github.com/MarvelousWendy" target="_blank" rel="noopener">Wendy</a> 🧸</footer>
+  </div>
+
+  <!-- ========== 脚本（加载顺序：数据 -> 逻辑） ========== -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+  <noscript>
+    <div class="card">
+      <p class="empty-msg" style="color:var(--danger);">
+        ⚠️ <span id="noscriptMsg">请启用 JavaScript 以使用此工具。</span>
+      </p>
+    </div>
+  </noscript>
+</body>
+</html>
