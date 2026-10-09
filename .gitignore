@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.workbuddy
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# WorkBuddy (local dev data, don't commit)
+.workbuddy/
+
+# 自测临时产物（tools/run-checks.sh 自动生成/清理）
+_selftest.html

@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
+# Ensure consistent line endings and encoding across platforms
 * text=auto
+
+# Source code files - force UTF-8
+*.html text working-tree-encoding=UTF-8
+*.css  text working-tree-encoding=UTF-8
+*.js   text working-tree-encoding=UTF-8
+*.json text working-tree-encoding=UTF-8
+*.md   text working-tree-encoding=UTF-8
+*.csv  text working-tree-encoding=UTF-8
+
+# Binary files
+*.png binary
+*.jpg binary
+*.ico binary
